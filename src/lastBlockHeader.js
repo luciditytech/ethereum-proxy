@@ -2,7 +2,7 @@ import Web3 from 'web3';
 
 import config from '../config/index';
 
-const web3 = new Web3(new Web3.providers.WebsocketProvider(`wss://${config.networkName}.infura.io/ws/v3/${config.infuraID}`));
+const web3 = () => (new Web3(new Web3.providers.WebsocketProvider(`wss://${config.networkName}.infura.io/ws/v3/${config.infuraID}`)));
 
 const listeners = [];
 export function listenLastBlockNumber(listener) {
@@ -38,7 +38,7 @@ function subscribe() {
   if (subscription) {
     subscription.unsubscribe();
   }
-  subscription = web3.eth.subscribe('newBlockHeaders');
+  subscription = web3().eth.subscribe('newBlockHeaders');
   subscription.on('data', async (data, error) => {
       if (error) {
         console.error(data, error);
@@ -48,7 +48,8 @@ function subscribe() {
       updateBlockHeader(data);
 
       resetTimeout();
-    });
+    })
+    .on('error', console.error);
 
   resetTimeout();
 }
