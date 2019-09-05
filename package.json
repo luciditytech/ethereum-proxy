@@ -1,0 +1,30 @@
+{
+  "name": "ethereum-proxy",
+  "version": "0.1.0",
+  "description": "Ethereum Proxy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luciditytech/ethereum-proxy.git"
+  },
+  "author": "Alexander Voloshko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luciditytech/ethereum-proxy/issues"
+  },
+  "homepage": "https://github.com/luciditytech/ethereum-proxy#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "celebrate": "^10.0.1",
+    "compression": "^1.7.4",
+    "dotenv": "^8.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "web3": "^1.2.1"
+  }
+}

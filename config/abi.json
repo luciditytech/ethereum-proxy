@@ -1,0 +1,2469 @@
+[
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"singleStorage",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_blockHeight",
+        "type":"uint256"
+      },
+      {
+        "name":"_i",
+        "type":"uint256"
+      }
+    ],
+    "name":"getBlockAddress",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+
+    ],
+    "name":"register",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"isRegistered",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_newInstance",
+        "type":"address"
+      }
+    ],
+    "name":"unregister",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"getAllStorages",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address[]"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_blockHeight",
+        "type":"uint256"
+      },
+      {
+        "name":"_shard",
+        "type":"uint256"
+      }
+    ],
+    "name":"getBlockMaxVotes",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"updateMinimumStakingTokenPercentageEnabled",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_blockHeight",
+        "type":"uint256"
+      },
+      {
+        "name":"_shard",
+        "type":"uint256"
+      }
+    ],
+    "name":"getBlockRoot",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bytes32"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"getCurrentElectionCycleBlock",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"isProposePhase",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_blockHeight",
+        "type":"uint256"
+      }
+    ],
+    "name":"getBlockAddressCount",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+
+    ],
+    "name":"renounceOwnership",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"contractName",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bytes32"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_blockHeight",
+        "type":"uint256"
+      },
+      {
+        "name":"_shard",
+        "type":"uint256"
+      }
+    ],
+    "name":"isElectionValid",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"getFirstCycleBlock",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"getBlockHeight",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_blockHeight",
+        "type":"uint256"
+      },
+      {
+        "name":"_shard",
+        "type":"uint256"
+      }
+    ],
+    "name":"getStakeTokenBalanceFor",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_shard",
+        "type":"uint256"
+      }
+    ],
+    "name":"initialBlockHeights",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"owner",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"isOwner",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_blockHeight",
+        "type":"uint256"
+      },
+      {
+        "name":"_voter",
+        "type":"address"
+      }
+    ],
+    "name":"getBlockVoter",
+    "outputs":[
+      {
+        "name":"blindedProposal",
+        "type":"bytes32"
+      },
+      {
+        "name":"shard",
+        "type":"uint256"
+      },
+      {
+        "name":"proposal",
+        "type":"bytes32"
+      },
+      {
+        "name":"balance",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_blindedProposal",
+        "type":"bytes32"
+      }
+    ],
+    "name":"propose",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"contractRegistry",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"blocksPerPhase",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint8"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_proposal",
+        "type":"bytes32"
+      },
+      {
+        "name":"_secret",
+        "type":"bytes32"
+      }
+    ],
+    "name":"createProof",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bytes32"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"pure",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_minimumStakingTokenPercentage",
+        "type":"uint8"
+      }
+    ],
+    "name":"updateMinimumStakingTokenPercentage",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"minimumStakingTokenPercentage",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint8"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_blockHeight",
+        "type":"uint256"
+      },
+      {
+        "name":"_shard",
+        "type":"uint256"
+      },
+      {
+        "name":"_proposal",
+        "type":"bytes32"
+      }
+    ],
+    "name":"getBlockCount",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"newOwner",
+        "type":"address"
+      }
+    ],
+    "name":"transferOwnership",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_proposal",
+        "type":"bytes32"
+      },
+      {
+        "name":"_secret",
+        "type":"bytes32"
+      }
+    ],
+    "name":"reveal",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "inputs":[
+      {
+        "name":"_contractRegistry",
+        "type":"address"
+      },
+      {
+        "name":"_chainStorage",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"constructor"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"previousOwner",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"newOwner",
+        "type":"address"
+      }
+    ],
+    "name":"OwnershipTransferred",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"executor",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"newStorageOwner",
+        "type":"address"
+      }
+    ],
+    "name":"LogDetachFromStorage",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"storageAddress",
+        "type":"address"
+      }
+    ],
+    "name":"LogNewStorage",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"executor",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"registered",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"isRegistered",
+        "type":"bool"
+      }
+    ],
+    "name":"LogRegister",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":false,
+        "name":"balance",
+        "type":"uint256"
+      },
+      {
+        "indexed":true,
+        "name":"balanceReceiver",
+        "type":"address"
+      }
+    ],
+    "name":"LogSuicide",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"sender",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"blockHeight",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"blindedProposal",
+        "type":"bytes32"
+      },
+      {
+        "indexed":false,
+        "name":"shard",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"balance",
+        "type":"uint256"
+      }
+    ],
+    "name":"LogPropose",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"sender",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"blockHeight",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"proposal",
+        "type":"bytes32"
+      }
+    ],
+    "name":"LogReveal",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"sender",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"blockHeight",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"shard",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"proposal",
+        "type":"bytes32"
+      },
+      {
+        "indexed":false,
+        "name":"counts",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"balance",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"newWinner",
+        "type":"bool"
+      },
+      {
+        "indexed":false,
+        "name":"totalTokenBalanceForShard",
+        "type":"uint256"
+      }
+    ],
+    "name":"LogUpdateCounters",
+    "type":"event"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"singleStorage",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"verifiersPerShard",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_name",
+        "type":"string"
+      },
+      {
+        "name":"_location",
+        "type":"string"
+      }
+    ],
+    "name":"create",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+
+    ],
+    "name":"register",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"isRegistered",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_newInstance",
+        "type":"address"
+      }
+    ],
+    "name":"unregister",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"getAllStorages",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address[]"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_shard",
+        "type":"uint256"
+      }
+    ],
+    "name":"balancesPerShard",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_verifier",
+        "type":"address"
+      }
+    ],
+    "name":"verifiers",
+    "outputs":[
+      {
+        "name":"id",
+        "type":"address"
+      },
+      {
+        "name":"name",
+        "type":"string"
+      },
+      {
+        "name":"location",
+        "type":"string"
+      },
+      {
+        "name":"active",
+        "type":"bool"
+      },
+      {
+        "name":"balance",
+        "type":"uint256"
+      },
+      {
+        "name":"shard",
+        "type":"uint256"
+      },
+      {
+        "name":"enabled",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"getNumberOfVerifiers",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+
+    ],
+    "name":"renounceOwnership",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"contractName",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bytes32"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_active",
+        "type":"bool"
+      }
+    ],
+    "name":"updateActiveStatus",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"owner",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"isOwner",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_newVerifiersPerShard",
+        "type":"uint256"
+      }
+    ],
+    "name":"updateVerifiersPerShard",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"contractRegistry",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_verifier",
+        "type":"address"
+      },
+      {
+        "name":"_enabled",
+        "type":"bool"
+      }
+    ],
+    "name":"updateEnabledStatus",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_verifier",
+        "type":"address"
+      },
+      {
+        "name":"_amount",
+        "type":"uint256"
+      }
+    ],
+    "name":"increaseShardBalance",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_verifier",
+        "type":"address"
+      },
+      {
+        "name":"_amount",
+        "type":"uint256"
+      }
+    ],
+    "name":"decreaseShardBalance",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_hash",
+        "type":"bytes32"
+      }
+    ],
+    "name":"uniqueNames",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_i",
+        "type":"uint256"
+      }
+    ],
+    "name":"addresses",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_toCheck",
+        "type":"address"
+      }
+    ],
+    "name":"isRegisteredVerifier",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"newOwner",
+        "type":"address"
+      }
+    ],
+    "name":"transferOwnership",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_name",
+        "type":"string"
+      },
+      {
+        "name":"_location",
+        "type":"string"
+      }
+    ],
+    "name":"update",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "inputs":[
+      {
+        "name":"_registry",
+        "type":"address"
+      },
+      {
+        "name":"_storage",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"constructor"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":false,
+        "name":"id",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"name",
+        "type":"string"
+      },
+      {
+        "indexed":false,
+        "name":"location",
+        "type":"string"
+      },
+      {
+        "indexed":false,
+        "name":"active",
+        "type":"bool"
+      },
+      {
+        "indexed":false,
+        "name":"balance",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"shard",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"enabled",
+        "type":"bool"
+      }
+    ],
+    "name":"LogVerifierRegistered",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":false,
+        "name":"id",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"name",
+        "type":"string"
+      },
+      {
+        "indexed":false,
+        "name":"location",
+        "type":"string"
+      },
+      {
+        "indexed":false,
+        "name":"active",
+        "type":"bool"
+      },
+      {
+        "indexed":false,
+        "name":"balance",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"shard",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"enabled",
+        "type":"bool"
+      }
+    ],
+    "name":"LogVerifierUpdated",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":false,
+        "name":"shard",
+        "type":"uint256"
+      },
+      {
+        "indexed":false,
+        "name":"balance",
+        "type":"uint256"
+      }
+    ],
+    "name":"LogBalancePerShard",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":false,
+        "name":"verifier",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"active",
+        "type":"bool"
+      }
+    ],
+    "name":"LogUpdateActiveStatus",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":false,
+        "name":"executor",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"verifier",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"enabled",
+        "type":"bool"
+      }
+    ],
+    "name":"LogUpdateEnabledStatus",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"executor",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"newStorageOwner",
+        "type":"address"
+      }
+    ],
+    "name":"LogDetachFromStorage",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"storageAddress",
+        "type":"address"
+      }
+    ],
+    "name":"LogNewStorage",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"executor",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"registered",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"isRegistered",
+        "type":"bool"
+      }
+    ],
+    "name":"LogRegister",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":false,
+        "name":"balance",
+        "type":"uint256"
+      },
+      {
+        "indexed":true,
+        "name":"balanceReceiver",
+        "type":"address"
+      }
+    ],
+    "name":"LogSuicide",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"previousOwner",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"newOwner",
+        "type":"address"
+      }
+    ],
+    "name":"OwnershipTransferred",
+    "type":"event"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_instance",
+        "type":"address"
+      }
+    ],
+    "name":"add",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_newInstance",
+        "type":"address"
+      }
+    ],
+    "name":"update",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_name",
+        "type":"bytes32"
+      }
+    ],
+    "name":"contractByName",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+
+    ],
+    "name":"renounceOwnership",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"owner",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"isOwner",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"newOwner",
+        "type":"address"
+      }
+    ],
+    "name":"transferOwnership",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "inputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"constructor"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"executor",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"instanceName",
+        "type":"bytes32"
+      },
+      {
+        "indexed":false,
+        "name":"instance",
+        "type":"address"
+      }
+    ],
+    "name":"LogAdd",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"executor",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"instanceName",
+        "type":"bytes32"
+      },
+      {
+        "indexed":false,
+        "name":"oldInstance",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"newInstance",
+        "type":"address"
+      }
+    ],
+    "name":"LogUpdate",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"previousOwner",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"newOwner",
+        "type":"address"
+      }
+    ],
+    "name":"OwnershipTransferred",
+    "type":"event"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"singleStorage",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+
+    ],
+    "name":"register",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"isRegistered",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_value",
+        "type":"uint256"
+      }
+    ],
+    "name":"withdraw",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_newInstance",
+        "type":"address"
+      }
+    ],
+    "name":"unregister",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"getAllStorages",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address[]"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+      {
+        "name":"_verifier",
+        "type":"address"
+      }
+    ],
+    "name":"stakingBalance",
+    "outputs":[
+      {
+        "name":"",
+        "type":"uint256"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+
+    ],
+    "name":"renounceOwnership",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"contractName",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bytes32"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"owner",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"isOwner",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"_from",
+        "type":"address"
+      },
+      {
+        "name":"_value",
+        "type":"uint256"
+      },
+      {
+        "name":"_token",
+        "type":"address"
+      },
+      {
+        "name":"_data",
+        "type":"bytes"
+      }
+    ],
+    "name":"receiveApproval",
+    "outputs":[
+      {
+        "name":"",
+        "type":"bool"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"contractRegistry",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "constant":false,
+    "inputs":[
+      {
+        "name":"newOwner",
+        "type":"address"
+      }
+    ],
+    "name":"transferOwnership",
+    "outputs":[
+
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"function"
+  },
+  {
+    "constant":true,
+    "inputs":[
+
+    ],
+    "name":"token",
+    "outputs":[
+      {
+        "name":"",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"view",
+    "type":"function"
+  },
+  {
+    "inputs":[
+      {
+        "name":"_contractRegistry",
+        "type":"address"
+      },
+      {
+        "name":"_storage",
+        "type":"address"
+      }
+    ],
+    "payable":false,
+    "stateMutability":"nonpayable",
+    "type":"constructor"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"executor",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"newStorageOwner",
+        "type":"address"
+      }
+    ],
+    "name":"LogDetachFromStorage",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"storageAddress",
+        "type":"address"
+      }
+    ],
+    "name":"LogNewStorage",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"executor",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"registered",
+        "type":"address"
+      },
+      {
+        "indexed":false,
+        "name":"isRegistered",
+        "type":"bool"
+      }
+    ],
+    "name":"LogRegister",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":false,
+        "name":"balance",
+        "type":"uint256"
+      },
+      {
+        "indexed":true,
+        "name":"balanceReceiver",
+        "type":"address"
+      }
+    ],
+    "name":"LogSuicide",
+    "type":"event"
+  },
+  {
+    "anonymous":false,
+    "inputs":[
+      {
+        "indexed":true,
+        "name":"previousOwner",
+        "type":"address"
+      },
+      {
+        "indexed":true,
+        "name":"newOwner",
+        "type":"address"
+      }
+    ],
+    "name":"OwnershipTransferred",
+    "type":"event"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "singleStorage",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "register",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "isRegistered",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_newInstance",
+        "type": "address"
+      }
+    ],
+    "name": "unregister",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "bytes32"
+      },
+      {
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "name": "_publicKey",
+        "type": "string"
+      }
+    ],
+    "name": "update",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getAllStorages",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "string"
+      },
+      {
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "name": "_publicKey",
+        "type": "string"
+      }
+    ],
+    "name": "create",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "bytes32"
+      }
+    ],
+    "name": "participants",
+    "outputs": [
+      {
+        "name": "id",
+        "type": "bytes32"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "publicKey",
+        "type": "string"
+      },
+      {
+        "name": "externalId",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+      "name": "renounceOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "contractName",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "isOwner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "bytes32"
+      }
+    ],
+    "name": "isRegisteredParticipant",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "contractRegistry",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getNumberOfParticipants",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_i",
+        "type": "uint256"
+      }
+    ],
+    "name": "ids",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_registry",
+        "type": "address"
+      },
+      {
+        "name": "_storage",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "id",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "publicKey",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "externalId",
+        "type": "string"
+      }
+    ],
+    "name": "LogParticipantRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "id",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "publicKey",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "externalId",
+        "type": "string"
+      }
+    ],
+    "name": "LogParticipantUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "executor",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "newStorageOwner",
+        "type": "address"
+      }
+    ],
+    "name": "LogDetachFromStorage",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "storageAddress",
+        "type": "address"
+      }
+    ],
+    "name": "LogNewStorage",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "executor",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "registered",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "isRegistered",
+        "type": "bool"
+      }
+    ],
+    "name": "LogRegister",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "balance",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "balanceReceiver",
+        "type": "address"
+      }
+    ],
+    "name": "LogSuicide",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  }
+]
