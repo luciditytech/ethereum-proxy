@@ -1,0 +1,22 @@
+# Docker
+.dockerignore
+Dockerfile
+
+# Node.js
+node_modules
+npm-debug.log
+
+# App
+README.md
+Makefile
+.env
+
+# Git
+.git
+.gitignore
+
+# Misc
+.idea
+
+# System
+.DS_Store
