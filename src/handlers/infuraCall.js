@@ -1,9 +1,8 @@
 import axios from 'axios';
 import web3 from 'web3';
 
-import config from '../../config/index';
-
-const url = `https://${config.networkName}.infura.io/v3/${config.infuraID}`;
+import config from '../../config';
+import url from '../../config/urls';
 
 const funcNames = config.abi
   .filter(({ type }) => type === 'function')
