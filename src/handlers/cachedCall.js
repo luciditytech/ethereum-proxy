@@ -7,7 +7,7 @@ export default () => {
   let cache = null;
 
   function notifyListeners (func) {
-    listeners.forEach(({ req, res }) => func(req, res));
+    listeners.forEach(func);
     listeners.length = 0;
   }
 
@@ -15,13 +15,19 @@ export default () => {
     call: (req, res) => {
       if (cache) {
         console.info(`Cached method: ${req.body.method} (${++callCount})`);
-
-        success(res, cache);
+        res.setHeader('X-CACHE-COUNTER', callCount);
+        success(res, {
+          ...cache,
+          id: req.body.id
+        });
       } else {
         if (!listeners.length) {
           call(req, res, (res, data) => {
             cache = data;
-            notifyListeners(({ res }) => success(res, data));
+            notifyListeners(({ req, res }) => success(res, {
+              ...data,
+              id: req.body.id
+            }));
           }, (res, err) => {
             notifyListeners(({ res }) => reject(res, err));
           });
