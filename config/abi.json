@@ -1,5 +1,28 @@
 [
   {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_value1",
+        "type": "uint256"
+      },
+      {
+        "name": "_value2",
+        "type": "uint256"
+      }
+    ],
+    "name": "add",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "constant":true,
     "inputs":[
 

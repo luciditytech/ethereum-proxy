@@ -5,7 +5,7 @@ const config = {
   networkName: process.env.NETWORK_NAME || 'ropsten',
   infuraID: process.env.INFURA_ID || "",
   lastBlockTimeout: parseInt(process.env.LAST_BLOCK_TIMEOUT || "60000"),
-  abi
+  abi: process.env.ABI || abi
 };
 
 export default Object.freeze(config);

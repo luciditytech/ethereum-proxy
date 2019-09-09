@@ -2,7 +2,7 @@ import Web3 from 'web3';
 
 import config from '../config/index';
 
-const web3 = () => (new Web3(new Web3.providers.WebsocketProvider(`wss://${config.networkName}.infura.io/ws/v3/${config.infuraID}`)));
+import { ws as url } from '../config/urls';
 
 const listeners = [];
 export function listenLastBlockNumber(listener) {
@@ -23,35 +23,58 @@ export function lastBlockNumber() {
 }
 
 let timeout = null;
-function resetTimeout() {
+
+function stopPeriodicSubscription() {
   if (timeout) {
     clearTimeout(timeout);
+    timeout = null;
   }
+}
+function resetPeriodicSubscription() {
+  stopPeriodicSubscription();
   timeout = setTimeout(subscribe, config.lastBlockTimeout);
 }
 
-let subscription = null;
+let subscriptionContext = null;
 
-function subscribe() {
+export function subscribe() {
+  unsubscribe();
+
   console.info('Subscribing for Infura newBlockHeaders...');
 
-  if (subscription) {
-    subscription.unsubscribe();
-  }
-  subscription = web3().eth.subscribe('newBlockHeaders');
+  const websocketProvider = new Web3.providers.WebsocketProvider(url);
+  const web3 = new Web3(websocketProvider);
+
+  const subscription = web3.eth.subscribe('newBlockHeaders');
   subscription.on('data', async (data, error) => {
-      if (error) {
-        console.error(data, error);
-        return;
-      }
+    if (error) {
+      console.error(data, error);
+      return;
+    }
 
-      updateBlockHeader(data);
+    updateBlockHeader(data);
 
-      resetTimeout();
-    })
-    .on('error', console.error);
+    resetPeriodicSubscription();
+  })
+  .on('error', console.error);
 
-  resetTimeout();
+  resetPeriodicSubscription();
+
+  subscriptionContext = {
+    web3,
+    websocketProvider,
+    subscription
+  };
 }
 
-subscribe();
+export function unsubscribe() {
+  if (subscriptionContext) {
+    console.info('Unsubscribing from Infura newBlockHeaders...');
+
+    subscriptionContext.subscription.unsubscribe();
+    subscriptionContext.websocketProvider.disconnect();
+    subscriptionContext = null;
+  }
+
+  stopPeriodicSubscription();
+}

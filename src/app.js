@@ -5,7 +5,10 @@ import { errors } from 'celebrate';
 
 import routes from './routes';
 
-const app = new Express();
+const { subscribe, unsubscribe } = require('./lastBlockHeader');
+
+const app = new Express(),
+  server = require('http').createServer(app);
 
 app.use(compression());
 app.use(bodyParser.json({limit:'2mb'}));
@@ -13,13 +16,12 @@ app.use(bodyParser.urlencoded({ limit:'2mb', extended: true }));
 app.use('/', routes);
 app.use(errors());
 
-const port = process.env.PORT || 3000;
-
-app.listen(port, (err) => {
-  if (!err) {
-    console.log(`Server is running on port: ${port}`);
-  }
+server.on('listening', () => {
+  subscribe();
 });
 
-export default app;
+server.on('close', () => {
+  unsubscribe();
+});
 
+export default server;
