@@ -1,5 +1,6 @@
 import axios from 'axios';
 import web3 from 'web3';
+import { sha3 } from 'web3-utils';
 
 import config from '../../config';
 import url from '../../config/urls';
@@ -7,7 +8,7 @@ import url from '../../config/urls';
 const funcNames = config.abi
   .filter(({ type }) => type === 'function')
   .reduce((map, { name, inputs }) => {
-    const hash = web3.utils.sha3(`${name}(${inputs.map(({ type }) => type).join(',')})`).slice(0, 10);
+    const hash = sha3(`${name}(${inputs.map(({ type }) => type).join(',')})`).slice(0, 10);
     map[hash] = name;
     return map;
   }, {});

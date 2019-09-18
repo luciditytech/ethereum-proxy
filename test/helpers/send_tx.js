@@ -115,10 +115,16 @@ export async function genContractTx() {
   };
 }
 
-export async function sendTx(tx) {
-  const transactionResult = await web3.eth.sendSignedTransaction(tx || (await genTx()));
-
-  return transactionResult.transactionHash;
+export function sendTx(tx) {
+  return new Promise(async function(resolve, reject) {
+    web3.eth.sendSignedTransaction(tx || (await genTx()), (error, hash) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(hash);
+      }
+    });
+  });
 }
 
 function contractAddress (nonce) {
