@@ -71,7 +71,9 @@ export function unsubscribe() {
   if (subscriptionContext) {
     console.info('Unsubscribing from Infura newBlockHeaders...');
 
-    subscriptionContext.subscription.unsubscribe();
+    subscriptionContext.subscription.unsubscribe()
+      .catch(console.error);
+
     subscriptionContext.websocketProvider.disconnect();
     subscriptionContext = null;
   }
