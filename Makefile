@@ -29,6 +29,7 @@ deploy-staging: build push use-staging
 
 deploy-production: build push use-production
 	@echo "## Deployed to production ##"
+	@kubectl set image deployment/ethereum-proxy-api ethereum-proxy=$(IMAGE) -n ethereum-proxy
 
 rollback-staging: deploy-staging
 	@echo "## Rolling back - staging ##"
