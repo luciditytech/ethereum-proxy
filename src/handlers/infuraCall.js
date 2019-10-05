@@ -1,5 +1,4 @@
 import axios from 'axios';
-import web3 from 'web3';
 import { sha3 } from 'web3-utils';
 
 import config from '../../config';

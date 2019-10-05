@@ -8,6 +8,10 @@ import blockNumber from './handlers/blockNumber';
 import ethCall from './handlers/ethCall';
 import infuraCall from './handlers/infuraCall';
 
+import config from '../config/index';
+
+import { listenLastBlockNumber } from './lastBlockHeader';
+
 const router = new Router();
 
 function infuraPost(req, res) {
@@ -39,8 +43,18 @@ router.route('/').post(
   infuraPost
 );
 
+let lastBlockDate = Date.now();
+listenLastBlockNumber(() => {
+  lastBlockDate = Date.now();
+});
+
 router.get('/health', (req, res) => {
-  res.send('OK');
+  const secondsPassed = Date.now() - lastBlockDate;
+  if (secondsPassed > config.blockHealthTimeout) {
+    res.status(500).send(`The latest block was received ${Math.floor(secondsPassed / 1000)} seconds ago`);
+  } else {
+    res.send('OK');
+  }
 });
 
 export default router;
