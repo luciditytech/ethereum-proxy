@@ -1,6 +1,8 @@
 import Web3 from 'web3';
 import url from '../../config/urls';
 
+import config  from '../../config';
+
 const rlp = require('rlp');
 const keccak = require('keccak');
 
@@ -115,9 +117,17 @@ export async function genContractTx() {
   };
 }
 
-export function sendTx(tx) {
-  return new Promise(async function(resolve, reject) {
-    web3.eth.sendSignedTransaction(tx || (await genTx()), (error, hash) => {
+export async function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+export async function waitForBlock() {
+  await sleep(config.blockPollTimeout);
+}
+
+export async function sendTx(tx) {
+  const result = await new Promise(async (resolve, reject) => {
+    await web3.eth.sendSignedTransaction(tx || (await genTx()), (error, hash) => {
       if (error) {
         reject(error);
       } else {
@@ -125,6 +135,10 @@ export function sendTx(tx) {
       }
     });
   });
+
+  await waitForBlock();
+
+  return result;
 }
 
 function contractAddress (nonce) {

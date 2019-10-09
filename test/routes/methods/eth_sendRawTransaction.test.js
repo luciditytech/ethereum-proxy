@@ -3,7 +3,7 @@ import chaiHttp from 'chai-http';
 
 import app from 'src/app';
 
-import { genTx } from 'test/helpers/send_tx';
+import { genTx, waitForBlock } from 'test/helpers/send_tx';
 
 chai.use(chaiHttp);
 
@@ -43,6 +43,8 @@ describe('methods/eth_sendRawTransaction', function() {
         params: [await genTx()]
       });
 
+    await waitForBlock();
+
     const json2 = JSON.parse(res2.text);
     expect(json2.id).to.eq(2);
     expect(json2.jsonrpc).to.eq("2.0");
@@ -73,6 +75,8 @@ describe('methods/eth_sendRawTransaction', function() {
         id: 4,
         params: [tx]
       });
+
+    await waitForBlock();
 
     const json4 = JSON.parse(res4.text);
     expect(json4.id).to.eq(4);

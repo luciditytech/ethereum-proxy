@@ -50,4 +50,4 @@ fi
 
 sleep 1
 
-env NODE_PATH=$NODE_PATH:$PWD env NODE_ENV=test mocha -r esm --recursive --timeout 15000 "$@"
+env NODE_PATH=$NODE_PATH:$PWD env NODE_ENV=test env BLOCK_HEALTH_TIMEOUT=2 mocha -r esm --recursive --timeout 15000 "$@"

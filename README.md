@@ -3,7 +3,15 @@
 ```bash
 INFURA_ID=...
 NETWORK_NAME=ropsten
+PORT=3000
+BLOCK_SUBSCRIPTION_TIMEOUT=60
+BLOCK_POLL_TIMEOUT=0
+BLOCK_HEALTH_TIMEOUT=150
 ```
+
+The service reset websockets subscription after BLOCK_SUBSCRIPTION_TIMEOUT if no blocks show up.
+If BLOCK_POLL_TIMEOUT is greater than zero, then block polling mechanism is used instead of websockets.
+```/health``` returns 500 if blocks do not show up after BLOCK_HEALTH_TIMEOUT.
 
 ## Run server
 ```bash
