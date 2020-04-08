@@ -17,18 +17,19 @@ push: login
 
 use-staging:
 	@echo "## Using staging ##"
-	@aws eks update-kubeconfig --name kubernetes-staging
+	@aws eks update-kubeconfig --name kubernetes-staging --region us-east-1
 
 use-production:
 	@echo "## Using production ##"
-	@aws eks update-kubeconfig --name kubernetes-production
+	@aws eks update-kubeconfig --name kubernetes-production-1-15 --region us-east-1
 
-deploy-staging: build push use-staging
+deploy-staging: build push use-staging deploy-current-cluster-context
 	@echo "## Deployed to staging ##"
-	@kubectl set image deployment/ethereum-proxy-api ethereum-proxy=$(IMAGE) -n ethereum-proxy
 
-deploy-production: build push use-production
+deploy-production: build push use-production deploy-current-cluster-context
 	@echo "## Deployed to production ##"
+
+deploy-current-cluster-context:
 	@kubectl set image deployment/ethereum-proxy-api ethereum-proxy=$(IMAGE) -n ethereum-proxy
 
 rollback-staging: deploy-staging
