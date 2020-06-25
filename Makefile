@@ -1,15 +1,21 @@
 REPOSITORY=500669969333.dkr.ecr.us-east-1.amazonaws.com/ethereum-proxy
-TAG=$(shell git describe --abbrev=1 --tags --always)
+TAG=`git describe --abbrev=1 --tags --always`
 IMAGE="$(REPOSITORY):v$(TAG)"
 
 default: build
+
+tag:
+	@echo "Current tag is '$(TAG)'"
+
+image:
+	@echo "Current image is '$(IMAGE)'"
 
 build:
 	@echo "## Building the docker image ##"
 	@docker build -t $(IMAGE) .
 
 login:
-	$(shell aws ecr get-login --no-include-email)
+	`aws ecr get-login --no-include-email`
 
 push: login
 	@echo "## Pushing image to AWS ##"
@@ -32,8 +38,9 @@ deploy-production: build push use-production deploy-current-cluster-context
 deploy-current-cluster-context:
 	@kubectl set image deployment/ethereum-proxy-api ethereum-proxy=$(IMAGE) -n ethereum-proxy
 
-rollback-staging: deploy-staging
-	@echo "## Rolling back - staging ##"
+ssh-staging: use-staging ssh-current-context
 
-rollback-production: deploy-production
-	@echo "## Rolling back - production ##"
+ssh-production: use-production ssh-current-context
+
+ssh-current-context:
+	./scripts/ssh ethereum-proxy api
