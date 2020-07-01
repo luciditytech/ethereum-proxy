@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Poll blocks periodically if BLOCK_POLL_TIMEOUT is set
 - Health service return 500 if no blocks show up
 
+## [0.3.3] - 2020-06-30
+### Added
+- SSH tooling
+
+### Fixed
+- Docker tag
+- Docker running as non root
+
 ## [0.3.2] - 2020-04-07
 ### Changed
 - Deploy to new Kubernetes production cluster
