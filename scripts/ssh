@@ -1,0 +1,9 @@
+
+NAMESPACE="$1"
+DEPLOYMENT="$2"
+
+POD=$(kubectl get pods -n $NAMESPACE | grep -i $DEPLOYMENT | head -n 1 | awk '{print $1}')
+
+echo "Attaching to $POD"
+echo "..."
+kubectl exec -it "$POD" -n $NAMESPACE -- bash
