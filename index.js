@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('newrelic');
 
 const app = require('./src/app.js').default;
 
@@ -9,4 +10,3 @@ app.listen(port, (err) => {
     console.log(`Server is running on port: ${port}`);
   }
 });
-
