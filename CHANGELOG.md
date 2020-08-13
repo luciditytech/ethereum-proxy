@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Poll blocks periodically if BLOCK_POLL_TIMEOUT is set
 - Health service return 500 if no blocks show up
 
+## [0.3.4] - 2020-08-13
+### Added
+- NewRelic monitoring
+
 ## [0.3.3] - 2020-06-30
 ### Added
 - SSH tooling
