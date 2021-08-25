@@ -27,7 +27,7 @@ use-staging:
 
 use-production:
 	@echo "## Using production ##"
-	@aws eks update-kubeconfig --name kubernetes-production-1-15 --region us-east-1
+	@aws eks update-kubeconfig --name production-1-21-2 --region us-east-1
 
 deploy-staging: build push use-staging deploy-current-cluster-context
 	@echo "## Deployed to staging ##"
